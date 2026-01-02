@@ -10,7 +10,7 @@ Campus offices answer hundreds of repetitive queries—fee deadlines, scholarshi
 
 ## 🌟 Key Highlights
 
-- **Google AI Powered**: Uses Google Gemini (gemini-1.5-flash) for intelligent responses
+- **Google AI Powered**: Uses Google Gemini (gemini-2.5-flash) for intelligent responses
 - **Truly Multilingual**: 7+ Indian languages with automatic translation
 - **RAG Technology**: Retrieval Augmented Generation for accurate, context-aware answers
 - **Easy to Deploy**: Docker-ready, works on low-resource servers
@@ -314,8 +314,7 @@ MIT License - Free to use for educational purposes.
 
 Built for **TechSprint 2025 - GDGOC Hackathon**
 
-**GitHub**: [@sahaj33-op](https://github.com/sahaj33-op)
-**GitHub**: [@divyviradiya1501](https://github.com/divyviradiya1501)
+**GitHub**: [@sahaj33-op](https://github.com/sahaj33-op), [@divyviradiya1501](https://github.com/divyviradiya1501)
 
 ## Support
 
