@@ -15,12 +15,20 @@ settings = get_settings()
 
 # Ensure database directory exists for SQLite
 if "sqlite" in settings.database_url:
-    db_path = settings.database_url.replace("sqlite+aiosqlite:///", "")
+    # Extract database path from SQLite URL
+    # Format: sqlite+aiosqlite:///path (relative, 3 slashes)
+    #         sqlite+aiosqlite:////path (absolute, 4 slashes)
+    if settings.database_url.startswith("sqlite+aiosqlite:////"):
+        # Absolute path: remove scheme + 3 slashes, leaving /absolute/path
+        db_path = settings.database_url[len("sqlite+aiosqlite:///"):]
+    else:
+        # Relative path: remove scheme + 3 slashes
+        db_path = settings.database_url.replace("sqlite+aiosqlite:///", "")
+    
     db_dir = os.path.dirname(db_path)
     if db_dir:
         os.makedirs(db_dir, exist_ok=True)
         logger.info(f"Ensured database directory exists: {db_dir}")
-
 
 # Create async engine
 if "sqlite" in settings.database_url:
