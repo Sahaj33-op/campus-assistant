@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(copy:*)",
+      "Bash(python:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev)",
+      "Bash(cat:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}
